@@ -8,10 +8,26 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        print("viewDidLoad() 뷰가 로드 되었다.")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("viewWillAppear() 뷰가 나타날 것이다.")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("viewDidAppear() 뷰가 나타났다.")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("viewWillDisAppear() 뷰가 사라질 것이다.")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("viewDidDisappear() 뷰가 사라졌다.")
     }
 //MARK: - 코드로 네비게이션 활용 화면 전환
     @IBAction func btn_codePush(_ sender: UIButton) {
@@ -31,5 +47,8 @@ class ViewController: UIViewController {
         
         self.present(viewController, animated: true, completion: nil)
     }
+    
+
+    
 }
 
